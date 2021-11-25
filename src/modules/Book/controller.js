@@ -1,13 +1,17 @@
-const bookContoller = {
-    getOne: async(req, res)=>{
+import ApiError from "../../helpers/ApiError.js";
 
-    },
-    getAll: async(req, res)=>{
-
-    },
-    getById: async(req, res)=>{
-        
+class BookContoller {
+    #model
+    constructor(model){
+        this.#model = model
+    }
+    getOne = async (req, res, next)=>{
+        try {
+            res.status(200).json({message:"OK"})
+        } catch (error) {
+            
+        }
     }
 }
 
-export default bookContoller
+export default BookContoller
